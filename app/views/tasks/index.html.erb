@@ -9,8 +9,16 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.title %></td>
-        <td><%= link_to '編集', edit_task_path(task) %></td>
-        <td><%= link_to '削除', task_path(task), method: :delete %></td>
+        <td>
+        <%= form_with url: edit_task_path(task), method: :get, local: true do |form| %>
+            <%=  form.submit'編集' %>
+            <% end %>
+        </td>
+        <td>
+          <%= form_with model: task, method: :delete, local: true do |form| %>
+            <%= form.submit '削除' %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   </tbody>
