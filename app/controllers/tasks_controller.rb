@@ -1,4 +1,6 @@
 class TasksController < ApplicationController
+  before_action :authenticate_user!  # Devise method to authenticate user before any action
+
   def index
     @tasks = Task.all
   end

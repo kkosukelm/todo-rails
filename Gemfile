@@ -4,6 +4,7 @@ ruby "3.0.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.3"
+gem "bcrypt", "3.1.12"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -25,6 +26,8 @@ gem "stimulus-rails"
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+gem "devise"
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
